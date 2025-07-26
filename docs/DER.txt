@@ -1,0 +1,33 @@
+ENTIDADE: usuarios
+- id (PK)
+- nome
+- login
+- senha_hash
+- nivel_acesso
+
+ENTIDADE: clientes
+- id (PK)
+- nome
+- telefone
+- email
+- endereço
+
+ENTIDADE: produtos
+- id (PK)
+- nome
+- preco
+- estoque
+
+ENTIDADE: vendas
+- id (PK)
+- cliente_id (FK -> clientes.id)
+- usuario_id (FK -> usuarios.id)
+- data (DEFAULT CURRENT_TIMESTAMP)
+- total
+
+ENTIDADE: itens_venda
+- id (PK)
+- venda_id (FK -> vendas.id)
+- produto_id (FK -> produtos.id)
+- quantidade
+- preco_unitario

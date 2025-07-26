@@ -1,0 +1,37 @@
+Algoritmo: Sistema de Controle de Loja
+
+1. Início do sistema
+   1.1. Carregar configurações do banco de dados (.env)
+   1.2. Estabelecer conexão com o banco (MySQL)
+   1.3. Exibir a tela de login
+
+2. Autenticação do Usuário
+   2.1. Usuário digita login e senha
+   2.2. Verificar no banco de dados
+       - Se válido: abrir tela principal
+       - Se inválido: exibir mensagem de erro
+
+3. Tela Principal (MainView)
+   3.1. Botões:
+       - Vendas
+       - Produtos (em construção)
+       - Clientes (em construção)
+
+4. Registrar Venda
+   4.1. Abrir tela de venda
+   4.2. Preencher:
+       - ID do Cliente
+       - ID do Usuário
+       - Itens no formato: produto_id,quantidade,preco|...
+   4.3. Clicar em "Registrar"
+   4.4. Sistema:
+       - Calcula o total
+       - Insere a venda na tabela `vendas`
+       - Insere os itens na tabela `itens_venda`
+       - Exibe mensagem de sucesso com o ID da venda
+
+5. Listar Vendas (opcional)
+   5.1. Buscar todos os registros na tabela `vendas`
+   5.2. Retornar lista para visualização (a implementar)
+
+6. Fim do sistema

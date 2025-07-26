@@ -1,0 +1,8 @@
+# Ignorar ambiente virtual
+.venv/
+
+# Ignorar .env com dados sensíveis
+.env
+
+# Ignorar arquivos Python compilados
+*.pyc
